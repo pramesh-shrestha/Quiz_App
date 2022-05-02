@@ -56,9 +56,9 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Check - in" />
+                        <MenuItem mnemonicParsing="false" onAction="#switchToCreateBookingScene" text="Check - in" />
                         <MenuItem mnemonicParsing="false" text="Check - out" />
-                        <MenuItem mnemonicParsing="false" text="Booked Rooms" />
+                        <MenuItem fx:id="createBooking" mnemonicParsing="false" onAction="#handle" text="Booked Rooms" />
                         <MenuItem mnemonicParsing="false" text="Available Rooms" />
                         <MenuItem mnemonicParsing="false" text="Close" />
                   </items>
@@ -82,21 +82,25 @@
             </MenuBar>
          </children>
       </VBox>
-      <TabPane prefHeight="184.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-            <Tab text="List ofBooked Rooms">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab text="List of Available Rooms">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-      <Button mnemonicParsing="false" onAction="#switchToCreateBookingScene" text="Button" />
+      <AnchorPane fx:id="changeAnchorPane" prefHeight="464.0" prefWidth="1038.0">
+         <children>
+            <Button layoutX="23.0" layoutY="380.0" mnemonicParsing="false" onAction="#switchToCreateBookingScene" text="Button" />
+            <TabPane prefHeight="366.0" prefWidth="1038.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="List ofBooked Rooms">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="List of Available Rooms">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
    </children>
    <effect>
       <InnerShadow />
