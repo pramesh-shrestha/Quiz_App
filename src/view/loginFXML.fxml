@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #03203C;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.loginFXMLController">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="88.0" prefHeight="257.0" prefWidth="218.0" style="-fx-background-color: #758283;">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="218.0" text="Admin" textFill="#f2eded">
+               <VBox.margin>
+                  <Insets bottom="35.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Email">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="adminEmail" promptText="Enter email" />
+            <Label text="Password">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="adminPassword" promptText="Enter password" />
+            <Button fx:id="adminLoginBtn" mnemonicParsing="false" onAction="#adminLogin" prefHeight="25.0" prefWidth="65.0" text="Login">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="341.0" layoutY="88.0" prefHeight="257.0" prefWidth="218.0" style="-fx-background-color: #758283;">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="218.0" text="Student" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="35.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Email" />
+            <TextField fx:id="studentEmail" promptText="Enter email" />
+            <Label text="Password">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <PasswordField fx:id="studentPassword" promptText="Enter password" />
+            <Button fx:id="studentLoginBtn" mnemonicParsing="false" onAction="#studentLogin" prefHeight="25.0" prefWidth="65.0" text="Login">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </VBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="33.0" prefHeight="35.0" prefWidth="323.0" text="Quiz Application" textFill="#f8f5f5" AnchorPane.bottomAnchor="312.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>
